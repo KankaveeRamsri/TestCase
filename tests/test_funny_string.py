@@ -1,0 +1,46 @@
+from problems.funny_string import is_funny_string
+import unittest
+
+class FunnyStringTest(unittest.TestCase):
+    def test_give_acxz_is_not_funny(self):
+        funny_string = 'acxz'
+        is_funny = is_funny_string(funny_string)
+        self.assertEqual(is_funny, 'Not Funny')
+    
+    def test_give_ivvkxq_is_not_funny(self):
+        funny_string = 'ivvkxq'
+        is_funny = is_funny_string(funny_string)
+        self.assertEqual(is_funny, 'Not Funny')
+
+
+    def test_give_ovyvzvptyvpvpxyztlrztsrztztqvrxtxuxq_is_funny(self):
+        funny_string = 'ovyvzvptyvpvpxyztlrztsrztztqvrxtxuxq'
+        is_funny = is_funny_string(funny_string)
+        self.assertEqual(is_funny, 'Funny')
+    
+    def test_give_kovzuywsuvwxuxtwzryzuxyvouvyskoqtwryszxqqxzsyrwtqoksyvuovyxuzyrzwtxuxwvuswuqvryu_is_funny(self):
+        funny_string = 'kovzuywsuvwxuxtwzryzuxyvouvyskoqtwryszxqqxzsyrwtqoksyvuovyxuzyrzwtxuxwvuswuqvryu'
+        is_funny = is_funny_string(funny_string)
+        self.assertEqual(is_funny, 'Funny')
+        
+    
+    def test_give_qvskvvqkkmdjouseikfeurwxjovvjxgbuxkqucceoenczhhhrlknegkpwfmheriyqrqltrojwdmvksedgorlvcztimbodimtbeetuteqypnkkqmrgdccgcwopwctgpmhsrconiglwsuiiibokdrqgngwmjprzcztuehhlmtjeprnwrbjvrbbhiwsqmlrplklqssbenjjdcxbtyjqrjrzqpridfytrkfhcyhhlrrntpqmpycgiugzmyiofiivsoctmkdwctmuiciwzlfjimltmujrcsovgqrrctofocyydiwevbpdozvbvetyyhueynvbilfvogtqpqvksmmhnjjipchnkdqjrnjyzptnwpfohbxbomhcwrjlurzftsnmhxkhogtnubbddzdqlmrkdb_is_not_funny(self):
+        funny_string = 'qvskvvqkkmdjouseikfeurwxjovvjxgbuxkqucceoenczhhhrlknegkpwfmheriyqrqltrojwdmvksedgorlvcztimbodimtbeetuteqypnkkqmrgdccgcwopwctgpmhsrconiglwsuiiibokdrqgngwmjprzcztuehhlmtjeprnwrbjvrbbhiwsqmlrplklqssbenjjdcxbtyjqrjrzqpridfytrkfhcyhhlrrntpqmpycgiugzmyiofiivsoctmkdwctmuiciwzlfjimltmujrcsovgqrrctofocyydiwevbpdozvbvetyyhueynvbilfvogtqpqvksmmhnjjipchnkdqjrnjyzptnwpfohbxbomhcwrjlurzftsnmhxkhogtnubbddzdqlmrkdb'
+        is_funny = is_funny_string(funny_string)
+        self.assertEqual(is_funny, 'Not Funny')
+        
+    def test_give_sggkurbcnpjltuikliodnxcpifcnsgqklwvipxlcmvmfsvrddffsfijmnkzfqpqdnnmdkzgwusdmptqsbwkfhsstetztlryxekcnlilgzqtojmijitpqnilrbkmlbklgwmvhtiouxiljturdojvbsgtusgiursbpgxwzfkvdtinodgtqoosgvodntkimckcjhziljgpfncupinhxdcgbpinkruvuewdmvnxhsonfshwcwdybeebsnocekzzqxdcvpbejrqnjylkwokzrqzmdppjcoirokujbvmjmeywejibyrzsjbeosuwtjgmwqghsdseoxembmtdnnefxhilychrmnfkfkqynkcdjfpmtkogwukubthyworldvwjfphtylwkrnvkwlrvfdpfvvdulvfpqbxxphqqtockbwwxhnsmqjsngvjtqpijsighqvyjkcsmxojheduvnmitjtozivkzfpjumjfxlxkknuqsxmnmyxfjqukxqtxwiituqxrbwblmxdeurtgpqnzghkfydexllqhcpzcodozztfvkxdbnrzuyjcyofvbqnhtdiwsklrlgvgpvjpkzqhzzibpmvpelvypfvhpizznwierquerkktlrtzfqolbljrqgxhnwgctnfmfypyjyrvrkvwcjjdwrtmztsmrzompsyvtpteqmyhxtfzfncdhwogritjjhuzcsvwkqzzdxgctnbxzezibpptyjcjrwjuqeqzvpyznhcgtcfuigdkwrducffvbnpqsgsouqnjyqqruumccqlxjntlrygrlwkgccvytkhubzluvyvxoguzsqkkordbnoirpdplnxhnwrjsserillhddsoslrvbfdrwggjufpjeirvcwmkhysjcnzvxsqxytowbvfwdvfgg_is_not_funny(self):
+        funny_string = 'sggkurbcnpjltuikliodnxcpifcnsgqklwvipxlcmvmfsvrddffsfijmnkzfqpqdnnmdkzgwusdmptqsbwkfhsstetztlryxekcnlilgzqtojmijitpqnilrbkmlbklgwmvhtiouxiljturdojvbsgtusgiursbpgxwzfkvdtinodgtqoosgvodntkimckcjhziljgpfncupinhxdcgbpinkruvuewdmvnxhsonfshwcwdybeebsnocekzzqxdcvpbejrqnjylkwokzrqzmdppjcoirokujbvmjmeywejibyrzsjbeosuwtjgmwqghsdseoxembmtdnnefxhilychrmnfkfkqynkcdjfpmtkogwukubthyworldvwjfphtylwkrnvkwlrvfdpfvvdulvfpqbxxphqqtockbwwxhnsmqjsngvjtqpijsighqvyjkcsmxojheduvnmitjtozivkzfpjumjfxlxkknuqsxmnmyxfjqukxqtxwiituqxrbwblmxdeurtgpqnzghkfydexllqhcpzcodozztfvkxdbnrzuyjcyofvbqnhtdiwsklrlgvgpvjpkzqhzzibpmvpelvypfvhpizznwierquerkktlrtzfqolbljrqgxhnwgctnfmfypyjyrvrkvwcjjdwrtmztsmrzompsyvtpteqmyhxtfzfncdhwogritjjhuzcsvwkqzzdxgctnbxzezibpptyjcjrwjuqeqzvpyznhcgtcfuigdkwrducffvbnpqsgsouqnjyqqruumccqlxjntlrygrlwkgccvytkhubzluvyvxoguzsqkkordbnoirpdplnxhnwrjsserillhddsoslrvbfdrwggjufpjeirvcwmkhysjcnzvxsqxytowbvfwdvfgg'
+        is_funny = is_funny_string(funny_string)
+        self.assertEqual(is_funny, 'Not Funny')
+    
+    def test_give_rjdjjhqjhkphjhfxjplmqgrlinztqwtjhvspfixnupufxycippuhunrcbrxqpqzwntnrblhwcdcybdjqtfworqrrjokzelxtelmgxsdbueyxijpcnlpfdixlwhnctkuywhfvyhvvmwstfhustlwwtvjpfvqxinwetdzrjuowqgpvmmpgwnerioimkbkrniwgkvyusnqkuhfhsvoritishseqspjhyioidoewbvhxdneujtnsmxkuponjfvpeffnisrgvmmsozxlisxcgumzlcmtgkklooyxhpecdpvrosexkdzpxnoiqdcvmnjcchzixflztgskxvjjykxxwnhmpkkdxsfybgixksydzroyoxhohgngsurke_is_funny(self):
+        funny_string = 'rjdjjhqjhkphjhfxjplmqgrlinztqwtjhvspfixnupufxycippuhunrcbrxqpqzwntnrblhwcdcybdjqtfworqrrjokzelxtelmgxsdbueyxijpcnlpfdixlwhnctkuywhfvyhvvmwstfhustlwwtvjpfvqxinwetdzrjuowqgpvmmpgwnerioimkbkrniwgkvyusnqkuhfhsvoritishseqspjhyioidoewbvhxdneujtnsmxkuponjfvpeffnisrgvmmsozxlisxcgumzlcmtgkklooyxhpecdpvrosexkdzpxnoiqdcvmnjcchzixflztgskxvjjykxxwnhmpkkdxsfybgixksydzroyoxhohgngsurke'
+        is_funny = is_funny_string(funny_string)
+        self.assertEqual(is_funny, 'Funny')
+        
+    def test_give_holtm_is_not_funny(self):
+        funny_string = 'holtm'
+        is_funny = is_funny_string(funny_string)
+        self.assertEqual(is_funny, 'Not Funny')
+    
