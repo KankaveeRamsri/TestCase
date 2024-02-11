@@ -6,12 +6,3 @@ def select_alternatingCharacters(s):
 
     return deletions
     
-if __name__ == '__main__':
-    q = int(input().strip())
-
-    for q_itr in range(q):
-        s = input()
-
-        result = select_alternatingCharacters(s)
-        
-        print(result)

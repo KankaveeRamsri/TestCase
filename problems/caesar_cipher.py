@@ -13,13 +13,3 @@ def caesarCipher(s, k):
             ls.append(i)
     return ''.join(ls)
 
-if __name__ == '__main__':
-    n = int(input().strip())
-
-    s = input()
-
-    k = int(input().strip())
-
-    result = caesarCipher(s, k)
-
-    print(result)

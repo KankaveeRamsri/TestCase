@@ -5,10 +5,5 @@ def is_funny_string(s):
             return "Not Funny"
     return "Funny"
 
-if __name__ == '__main__':
-    times = int(input().strip())
-    for time in range(times):
-        text = input()
-        result = is_funny_string(text)
-        print("{}\n".format(result))
+
 

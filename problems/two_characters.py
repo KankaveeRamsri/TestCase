@@ -16,12 +16,3 @@ def alternate(s):
             maxx=max(maxx, len(ls))
     return maxx
 
-if __name__ == '__main__':
-
-    l = int(input().strip())
-
-    s = input()
-
-    result = alternate(s)
-
-    print(result)
